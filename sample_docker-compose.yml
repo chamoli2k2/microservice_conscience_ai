@@ -1,0 +1,18 @@
+version: '3'
+services:
+  node-app:
+    build: ./node-app
+    ports:
+      - "3000:3000"
+    environment:
+      RABBITMQ_URL: "RABBITMQ_URL"
+    volumes:
+      - ./node-app:/app
+
+  python-consumer:
+    build: ./python-consumer
+    environment:
+      RABBITMQ_URL: "RABBITMQ_URL"
+      MONGO_URL: "MONGO_URL"
+    volumes:
+      - ./python-consumer:/app
