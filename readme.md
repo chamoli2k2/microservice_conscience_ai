@@ -1,7 +1,3 @@
-Here is a simple and clear README file for your project:
-
----
-
 # Microservice-Based Application with Node.js, Python, RabbitMQ, and MongoDB
 
 ## Overview
